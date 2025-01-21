@@ -1,9 +1,9 @@
-import Counter from "./Counter";
+import TodoList from "./components/TodoList";
 
 const App = () => {
   return (
     <div className="w-screen h-screen grid place-content-center">
-      <Counter />
+      <TodoList />
     </div>
   );
 };
