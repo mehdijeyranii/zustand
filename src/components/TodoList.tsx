@@ -36,17 +36,19 @@ const TodoList: React.FC = () => {
           <li
             key={todo.id}
             className={`flex justify-between items-center p-2 border rounded ${
-              todo.completed ? "bg-gray-50/10 line-through" : ""
+              todo.completed ? "bg-gray-50/10" : ""
             }`}
           >
             <span
               onClick={() => toggleTodo(todo.id)}
-              className="cursor-pointer"
+              className={`cursor-pointer ${
+                todo.completed ? "line-through" : ""
+              }`}
             >
               {todo.text}
             </span>
             <button
-              className="px-2 py-1 bg-red-500 text-white rounded flex justify-center items-center gap-1"
+              className="px-2 py-1 bg-rose-500 text-white rounded flex justify-center items-center gap-1"
               onClick={() => removeTodo(todo.id)}
             >
               <AiOutlineDelete /> Delete
